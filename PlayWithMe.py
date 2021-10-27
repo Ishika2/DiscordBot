@@ -12,6 +12,7 @@ from discord.ext.commands.help import HelpCommand
 from discord.flags import Intents
 import dotenv
 import random
+import keep_alive
 
 dotenv.load_dotenv()
 
@@ -518,4 +519,5 @@ async def play(ctx):
     # guils = client.get_guild(guild.utils.)
     await ctx.channel.send(embed = emb)
 
+keep_alive.keep_alive()
 client.run(TOKEN)
